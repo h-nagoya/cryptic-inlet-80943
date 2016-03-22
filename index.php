@@ -1,5 +1,6 @@
 <html>
 <body>
-Hello, World!
+<p>Hello, World!</p>
+<p>こんにちは</p>
 </body>
 </html>
