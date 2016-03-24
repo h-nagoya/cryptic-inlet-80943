@@ -25,20 +25,26 @@
     </div>
     <div>
       <p>
-	現在の日時（クライアントサイド）: <span id="ct2"></span>
+	現在の日時（クライアントサイド）: <span id="ct2"></span> [<span id="ct3"></span>]
       </p>
     </div>
     <script type="text/javascript">
       $(function(){
 
       function now() {
-      	return moment().format('YYYY-MM-DD hh:mm:ss.SSS Z');
+      	return moment().format('YYYY-MM-DD HH:mm:ss.SSS Z');
       };
-      $("#ct").text(now());
-      $("#ct2").text(now());
+
+      var t = now();
+      $("#ct").text(t);
+      $("#ct2").text(t);
+      $("#ct3").text(0);
+
+      var n = 0;
       setInterval(function() {
       	$("#ct2").text(now());
-      }, 200);
+	$("#ct3").text(++n);
+      }, 100);
 
       });
     </script>		
