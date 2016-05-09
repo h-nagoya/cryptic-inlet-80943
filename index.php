@@ -15,6 +15,11 @@
     </div>
     <div>
       <p>
+	このページを開いた時点での uptime（サーバーサイド）: <?php echo shell_exec("/usr/bin/uptime"); ?>
+      </p>
+    </div>
+    <div>
+      <p>
 	このページを開いた日時（サーバーサイド）: <?php echo date('Y-m-d H:i:s P'); ?>
       </p>
     </div>
@@ -44,7 +49,7 @@
       setInterval(function() {
       	$("#ct2").text(now());
 	$("#ct3").text(++n);
-      }, 100);
+      }, 500);
 
       });
     </script>		
